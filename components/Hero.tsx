@@ -4,10 +4,14 @@ export default function Hero() {
     return (
         <section className="relative h-[75vh] md:h-[85vh] w-full pt-16">
             {/* Background Image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url('https://picsum.photos/seed/heromovie/1920/1080')` }}
-            />
+            {/* Background Image */}
+            <div className="absolute inset-0">
+                <img
+                    src="https://picsum.photos/seed/heromovie/1920/1080"
+                    alt="Hero Background"
+                    className="w-full h-full object-cover"
+                />
+            </div>
 
             {/* Gradient Overlays */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-transparent" />
