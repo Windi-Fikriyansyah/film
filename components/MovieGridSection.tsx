@@ -37,7 +37,7 @@ export default function MovieGridSection({ title, slug, movies, maxItems = 8 }: 
                 </div>
 
                 {/* 8 Column Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 sm:gap-4">
                     {displayMovies.map((movie) => (
                         <MovieCard key={movie.id} movie={movie} />
                     ))}
