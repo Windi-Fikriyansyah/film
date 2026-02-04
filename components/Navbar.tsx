@@ -12,7 +12,7 @@ export default function Navbar() {
     }, [])
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 transform-gpu ${scrolled ? 'bg-[#050505] shadow-lg' : 'bg-gradient-to-b from-black/80 to-transparent'
+        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#050505] shadow-lg' : 'bg-gradient-to-b from-black/80 to-transparent'
             }`}>
             <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
                 {/* Left Section */}
