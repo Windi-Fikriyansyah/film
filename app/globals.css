@@ -10,12 +10,6 @@
   margin: 0;
 }
 
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -24,6 +18,8 @@ body {
   background-color: #050505;
   color: #ffffff;
   font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Custom scrollbar */
