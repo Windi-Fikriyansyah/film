@@ -14,21 +14,20 @@ export async function GET(request: Request) {
 
     try {
         // Build VIP player URL sesuai doc
-        let playerUrl: string
+        // Build VIP player URL sesuai doc
+        const playerUrl = new URL('https://multiembed.mov/directstream.php')
+        playerUrl.searchParams.append('video_id', videoId)
 
-        if (season && episode) {
-            // Series: https://godriveplayer.com/player.php?type=series&tmdb={id}&season={season}&episode={episode}
-            playerUrl = `https://godriveplayer.com/player.php?type=series&tmdb=${videoId}&season=${season}&episode=${episode}`
-        } else {
-            // Movie: https://godriveplayer.com/player.php?imdb={id}
-            // Note: Documentation requires IMDB ID (tt prefix).
-            // If videoId is TMDB ID (tmdb=1), this implementation might fail if provider requires strict IMDB ID.
-            if (tmdb === '1') {
-                // Fallback attempt using tmdb param for movie if supported (undocumented but common)
-                playerUrl = `https://godriveplayer.com/player.php?tmdb=${videoId}`
-            } else {
-                playerUrl = `https://godriveplayer.com/player.php?imdb=${videoId}`
-            }
+        if (tmdb === '1') {
+            playerUrl.searchParams.append('tmdb', '1')
+        }
+
+        if (season) {
+            playerUrl.searchParams.append('s', season)
+        }
+
+        if (episode) {
+            playerUrl.searchParams.append('e', episode)
         }
 
         // Return URL untuk di-embed di iframe
