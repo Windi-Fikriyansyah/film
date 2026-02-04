@@ -51,7 +51,7 @@ export default function Hero() {
                                 <Play className="w-5 h-5 fill-black" />
                                 Play
                             </button>
-                            <button className="flex items-center gap-2 bg-gray-600/70 text-white px-6 py-3 rounded font-semibold hover:bg-gray-600/50 transition backdrop-blur">
+                            <button className="flex items-center gap-2 bg-gray-600/90 text-white px-6 py-3 rounded font-semibold hover:bg-gray-600 transition">
                                 <Info className="w-5 h-5" />
                                 More Info
                             </button>
